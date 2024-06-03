@@ -540,7 +540,8 @@ int main(int argc, char **argv) {
 
   // Read sleigh file into DOM
   DocumentStorage docstorage;
-  Element *sleighroot = docstorage.openDocument(sleighfilename)->getRoot();
+  std::istringstream sla("<sleigh>" + sleighfilename + "</sleigh>");
+  Element *sleighroot = docstorage.parseDocument(sla)->getRoot();
   docstorage.registerTag(sleighroot);
   trans.initialize(docstorage);
 
