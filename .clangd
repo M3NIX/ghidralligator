@@ -1,0 +1,2 @@
+CompileFlags:
+  Add: [-I/tmp/ghidralligator/headers, -I/tmp/ghidralligator/src]
